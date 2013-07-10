@@ -34,7 +34,9 @@ class FacebookOAuth {
   public $decode_json = TRUE;
   /* Immediately retry the API call if the response was not successful. */
   //public $retry = TRUE;
-	
+
+
+
 
   /**
    * Set API URLS
@@ -140,7 +142,7 @@ class FacebookOAuth {
       $url = "{$this->host}{$url}";
     }
     if ($this->token->key)
-        $parameters['access_token'] = $this->token->key;
+        $parameters['access_token'] = $this->token->key; 
         
     $request = OAuthRequest::from_request($method, $url, $parameters);
     switch ($method) {
